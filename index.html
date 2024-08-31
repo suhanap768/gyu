@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Voting System</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, button, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Decentralized Voting System</h2>
+        <div class="form-group">
+            <label for="candidateName">Add Candidate</label>
+            <input type="text" id="candidateName" placeholder="Enter candidate name">
+            <button id="addCandidateButton">Add Candidate</button>
+        </div>
+        <div class="form-group">
+            <label for="voterAddress">Register Voter</label>
+            <input type="text" id="voterAddress" placeholder="Enter voter address">
+            <button id="registerVoterButton">Register Voter</button>
+        </div>
+        <div class="form-group">
+            <label for="candidateSelect">Vote for Candidate</label>
+            <select id="candidateSelect"></select>
+            <input type="text" id="messageHash" placeholder="Enter message hash">
+            <input type="text" id="signature" placeholder="Enter signature">
+            <button id="voteButton">Cast Vote</button>
+        </div>
+        <div class="form-group">
+            <button id="tallyVotesButton">Tally Votes</button>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
